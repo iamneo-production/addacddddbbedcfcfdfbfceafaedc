@@ -26,21 +26,21 @@ public class TaskController {
 
 
                                             @GetMapping("/changeStatus")
-                                                private Taskentity updatetaskStatus(@RequestParam("id") String id){
+                                                 Taskentity updatetaskStatus(@RequestParam("id") String id){
                                                         return service.updatetaskStatus(id);
                                                             }
 
                                                                 @GetMapping("/deleteTask")
-                                                                    private String deleteTask(@RequestParam("id") String id){
+                                                                     String deleteTask(@RequestParam("id") String id){
                                                                             return service.deleteTask(id);
                                                                                 }
                                                                                     @GetMapping("/alltasks")
-                                                                                        private List<Taskentity> getallTasks(){
+                                                                                         List<Taskentity> getallTasks(){
                                                                                                 return service.getallTasks();
                                                                                                     }
 
                                                                                                         @GetMapping("/getTask")
-                                                                                                            private Taskentity getTask(@RequestParam("id") String id){
+                                                                                                             Taskentity getTask(@RequestParam("id") String id){
                                                                                                                     return service.gettaskbyid(id);
                                                                                                                         }
 
