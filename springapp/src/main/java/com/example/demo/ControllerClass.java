@@ -10,29 +10,28 @@ import java.util.*;
 @RestController
 public class ControllerClass {
     @Autowired
-    ServiceClass service;
-    @GetMapping("/alltasks")
-    public List<ModelTask> getAllTasks()
-    {
-        return service.findAllTask();
-    }
-    @PostMapping("/saveTask")
-    public ModelTask addTask(@RequestBody ModelTask mt)
-    {
-        return service.addTask(mt);
-    }
-    @GetMapping("/deleteTask")
-    public void deleteTask(@RequestParam String taskId)
-    {
-        
-    service.deleteTask(Integer.valueOf(taskId));
-    }
-    @GetMapping("/getTask")
-    public Optional<ModelTask> getbyId(@RequestParam String taskId)
-    {
-        return service.getTaskById(Integer.valueOf(taskId));
-    }
+        ServiceClass service;
+            @GetMapping("/alltasks")
+                public List<ModelTask> getAllTasks()
+                    {
+                            return service.findAllTask();
+                                }
+                                    @PostMapping("/saveTask")
+                                        public ModelTask addTask(@RequestBody ModelTask mt)
+                                            {
+                                                    return service.addTask(mt);
+                                                        }
+                                                            @GetMapping("/deleteTask")
+                                                                public void deleteTask(@RequestParam String taskId)
+                                                                    {
+                                                                            
+                                                                                service.deleteTask(Integer.valueOf(taskId));
+                                                                    }
+                                                                        @GetMapping("/getTask")
+                                                                            public Optional<ModelTask> getbyId(@RequestParam String taskId)
+                                                                                {
+                                                                                        return service.getTaskById(Integer.valueOf(taskId));
+                                                                                            }
 
-
-    
-}
+                                                                                              
+                                                                                          }
