@@ -1,9 +1,8 @@
-package com.examly.springapp;
-
+package com.example.demo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import org.junit.Test; 
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -14,10 +13,10 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-@SpringBootTest(classes = SpringappApplication.class)
+@SpringBootTest
 @AutoConfigureMockMvc
 @RunWith(SpringRunner.class)
-public class SpringApplicationTests {
+public class ToListApplicationTests {
 
 	@Autowired
     private MockMvc mockMvc;	
@@ -70,7 +69,7 @@ public class SpringApplicationTests {
 	
 	//Delete A Task
 	@Test
-	public void test_case4() throws Exception {
+	public void test_case5() throws Exception {
 		
 		mockMvc.perform(MockMvcRequestBuilders.get("/deleteTask")
 				.param("taskId","12211")
